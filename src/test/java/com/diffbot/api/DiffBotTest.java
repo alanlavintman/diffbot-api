@@ -1,4 +1,4 @@
-package diffbot;
+package com.diffbot.api;
 
 import com.diffbot.api.impl.DiffBotRestApi;
 import org.codehaus.jettison.json.JSONException;
@@ -21,7 +21,7 @@ public class DiffBotTest
         try {
             DiffBotRestApi api = new DiffBotRestApi("http://api.diffbot.com/v2");
             JSONObject jsonObject = api.get("f38fcba6ec54956f66cee703c1717a71", "article", "http://www.xconomy.com/san-francisco/2012/07/25/diffbot-is-using-computer-vision-to-reinvent-the-semantic-web/", "meta,querystring,images(*)");
-            jsonObject = jsonObject;
+            jsonObject = jsonObject; //TODO: Do some real unit test here.
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();  // URL Encoding exception
         } catch (JSONException e) {
